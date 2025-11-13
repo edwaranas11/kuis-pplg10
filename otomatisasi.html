@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kuis PPLG - Teknologi Industri & Otomatisasi</title>
+  <title>Kuis PPLG - Teknologi Industri & Otomasi</title>
   <style>
     body {
       font-family: "Segoe UI", sans-serif;
@@ -49,6 +49,14 @@
     .options label:hover {
       background-color: #e0e7ff;
     }
+    .options label.correct {
+      background-color: #d1fae5;
+      border-color: #10b981;
+    }
+    .options label.incorrect {
+      background-color: #fee2e2;
+      border-color: #ef4444;
+    }
     button {
       padding: 10px 20px;
       font-size: 16px;
@@ -70,14 +78,6 @@
       border-radius: 5px;
       display: none;
     }
-    .correct {
-      background-color: #d1fae5;
-      border-color: #10b981;
-    }
-    .incorrect {
-      background-color: #fee2e2;
-      border-color: #ef4444;
-    }
     .feedback {
       font-weight: bold;
       margin-top: 5px;
@@ -93,7 +93,7 @@
 <body>
   <header>
     <img src="https://edwaranas11.github.io/soal-pplg1/LOGO%20SMK.png" alt="Logo Sekolah" />
-    <h1>Kuis PPLG - Teknologi Industri & Otomatisasi</h1>
+    <h1>Kuis PPLG - Teknologi Industri & Otomasi</h1>
     <p>Oleh Edwar Anas, S.Kom</p>
   </header>
 
@@ -106,55 +106,105 @@
 
   <script>
     const questions = [
-      { 
-        question: "1. Teknologi otomatisasi digunakan untuk…", 
-        options: ["Mengurangi pekerjaan manual", "Menaikkan harga produk", "Menghapus komputer", "Memperlambat proses produksi"], 
-        answer: 0 
+      {
+        question: "1. Sistem otomasi industri umumnya menggunakan PLC. Apa fungsi utama PLC?",
+        options: [
+          "Mengontrol dan mengotomatisasi proses industri",
+          "Mengubah energi listrik menjadi gerak",
+          "Menyimpan data produksi jangka panjang",
+          "Mengukur konsumsi daya mesin"
+        ],
+        answer: 0
       },
-      { 
-        question: "2. Robot industri biasanya digunakan untuk…", 
-        options: ["Pekerjaan berulang dan presisi tinggi", "Bermain game", "Mengajar di sekolah", "Menjual makanan"], 
-        answer: 0 
+      {
+        question: "2. Sensor proximity digunakan untuk mendeteksi…",
+        options: [
+          "Suhu udara",
+          "Keberadaan objek tanpa kontak fisik",
+          "Kecepatan putaran motor",
+          "Tekanan hidrolik"
+        ],
+        answer: 1
       },
-      { 
-        question: "3. IoT dalam industri memungkinkan…", 
-        options: ["Mesin saling terhubung dan bertukar data", "Mesin bekerja tanpa listrik", "Internet menjadi lebih lambat", "Penghapusan semua sensor"], 
-        answer: 0 
+      {
+        question: "3. Robot lengan industri memiliki beberapa axis/derajat kebebasan. Tujuannya adalah…",
+        options: [
+          "Menambah ukuran robot",
+          "Menambah kemampuan bergerak dan menjangkau posisi berbeda",
+          "Menghemat energi",
+          "Mengurangi kecepatan kerja robot"
+        ],
+        answer: 1
       },
-      { 
-        question: "4. Sistem otomatisasi dapat meningkatkan…", 
-        options: ["Efisiensi dan produktivitas", "Jumlah kesalahan", "Waktu istirahat mesin", "Biaya tanpa manfaat"], 
-        answer: 0 
+      {
+        question: "4. Sistem SCADA biasanya digunakan untuk…",
+        options: [
+          "Mengendalikan motor AC",
+          "Memantau dan mengontrol proses industri dari jarak jauh",
+          "Mengatur kualitas air",
+          "Menghitung beban listrik"
+        ],
+        answer: 1
       },
-      { 
-        question: "5. Contoh mesin otomatis di pabrik adalah…", 
-        options: ["Conveyor belt", "Kipas angin rumah", "Mouse komputer", "Printer sekolah"], 
-        answer: 0 
+      {
+        question: "5. Dalam otomasi, actuator berfungsi sebagai…",
+        options: [
+          "Perangkat penyimpan data",
+          "Penguat sinyal listrik",
+          "Pengubah sinyal kontrol menjadi gerakan",
+          "Penghitung jumlah produksi"
+        ],
+        answer: 2
       },
-      { 
-        question: "6. Sensor pada otomatisasi berfungsi untuk…", 
-        options: ["Mendeteksi kondisi lingkungan", "Menghapus data", "Memperbesar layar", "Mengubah warna mesin"], 
-        answer: 0 
+      {
+        question: "6. Sistem conveyor otomatis biasanya digunakan untuk…",
+        options: [
+          "Meningkatkan konsumsi listrik",
+          "Memindahkan barang secara berkelanjutan tanpa tenaga manusia",
+          "Menyortir dokumen kantor",
+          "Menghitung stok manual"
+        ],
+        answer: 1
       },
-      { 
-        question: "7. PLC (Programmable Logic Controller) adalah…", 
-        options: ["Pengendali otomatis untuk mesin industri", "Alat untuk desain grafis", "Mesin pencetak uang", "Game konsol"], 
-        answer: 0 
+      {
+        question: "7. Konsep predictive maintenance (pemeliharaan prediktif) biasanya memanfaatkan data dan IoT untuk…",
+        options: [
+          "Mendeteksi tanda-tanda kerusakan mesin sebelum terjadi kegagalan",
+          "Meningkatkan ukuran mesin",
+          "Menurunkan kualitas perawatan",
+          "Mematikan mesin secara otomatis setiap jam"
+        ],
+        answer: 0
       },
-      { 
-        question: "8. Salah satu manfaat robot dalam industri adalah…", 
-        options: ["Mengerjakan tugas berbahaya bagi manusia", "Memperlama produksi", "Meningkatkan konsumsi listrik tanpa manfaat", "Mengurangi kualitas barang"], 
-        answer: 0 
+      {
+        question: "8. Fungsi safety interlock pada mesin produksi adalah…",
+        options: [
+          "Mencegah mesin beroperasi saat kondisi tidak aman",
+          "Meningkatkan kecepatan mesin tanpa batas",
+          "Mengurangi kualitas produk",
+          "Melaporkan jumlah produksi ke pabrik lain"
+        ],
+        answer: 0
       },
-      { 
-        question: "9. Industri 4.0 menggabungkan teknologi seperti…", 
-        options: ["IoT, AI, dan otomatisasi", "Batu dan kayu", "Mesin tik manual", "Transportasi hewan"], 
-        answer: 0 
+      {
+        question: "9. HMI (Human Machine Interface) berguna untuk…",
+        options: [
+          "Memberi antarmuka bagi operator untuk memantau dan mengontrol mesin",
+          "Menghubungkan dua conveyor secara fisik",
+          "Mengganti sensor proximity",
+          "Menjalankan mesin tanpa listrik"
+        ],
+        answer: 0
       },
-      { 
-        question: "10. Contoh penerapan AI dalam industri adalah…", 
-        options: ["Prediksi kerusakan mesin", "Menggambar manual", "Membuat makanan secara tradisional", "Menghitung secara manual"], 
-        answer: 0 
+      {
+        question: "10. Industri 4.0 umumnya menggabungkan teknologi seperti…",
+        options: [
+          "IoT, AI, dan otomasi",
+          "Besi, kayu, dan batu",
+          "Mesin ketik manual",
+          "Transportasi hewan"
+        ],
+        answer: 0
       }
     ];
 
